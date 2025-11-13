@@ -118,51 +118,6 @@ export function JobsPage() {
       </section>
 
       {/* FAQ Accordion */}
-      <section
-        className="py-12 px-4 sm:px-6 lg:px-8 bg-[#529989]/5"
-        aria-labelledby="faq-heading"
-      >
-        <div className="max-w-3xl mx-auto">
-          <h2 id="faq-heading" className="text-[#204A3B] text-center mb-8">
-            Frequently Asked Questions
-          </h2>
-          <div className="space-y-4">
-            {faqs.map((faq, index) => (
-              <GlassCard key={index} className="p-0 overflow-hidden">
-                <button
-                  onClick={() => setOpenFaq(openFaq === index ? null : index)}
-                  className="w-full px-6 py-4 flex items-center justify-between text-left hover:bg-[#529989]/5 transition-colors"
-                  aria-expanded={openFaq === index}
-                  aria-controls={`faq-answer-${index}`}
-                >
-                  <span className="text-[#204A3B] pr-4">{faq.question}</span>
-                  {openFaq === index ? (
-                    <ChevronUp
-                      className="text-[#529989] flex-shrink-0"
-                      size={20}
-                      aria-hidden="true"
-                    />
-                  ) : (
-                    <ChevronDown
-                      className="text-[#529989] flex-shrink-0"
-                      size={20}
-                      aria-hidden="true"
-                    />
-                  )}
-                </button>
-                {openFaq === index && (
-                  <div
-                    id={`faq-answer-${index}`}
-                    className="px-6 pb-4 text-[#204A3B]/80 text-sm"
-                  >
-                    {faq.answer}
-                  </div>
-                )}
-              </GlassCard>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Application Embed Section */}
       <section

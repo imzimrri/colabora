@@ -17,9 +17,9 @@ export function HomePage({ onNavigate }: HomePageProps) {
               Connecting reliable local talent with essential industries
             </h1>
             <p className="text-[#204A3B]/80 mb-8 max-w-2xl mx-auto">
-              Colaborasolutions specializes in staffing solutions for
-              Agriculture and General Labor sectors, providing simple, modern
-              connections between skilled workers and businesses that need them.
+              Colaborasolution specializes in staffing solutions for Agriculture
+              and General Labor sectors, providing simple, modern connections
+              between skilled workers and businesses across California.
             </p>
           </div>
         </div>
