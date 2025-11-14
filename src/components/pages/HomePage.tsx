@@ -19,7 +19,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
             <p className="text-[#204A3B]/80 mb-8 max-w-2xl mx-auto">
               Colaborasolution specializes in staffing solutions for Agriculture
               and General Labor sectors, providing simple, modern connections
-              between skilled workers and businesses across California.
+              between skilled workers and businesses across Northern California.
             </p>
           </div>
         </div>
