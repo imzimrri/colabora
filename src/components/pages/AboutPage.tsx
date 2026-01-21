@@ -1,5 +1,6 @@
 import { Heart, Target, Users, Award } from 'lucide-react';
 import { GlassCard } from '../GlassCard';
+import foundersImage from '../../assets/founders.jpg';
 
 export function AboutPage() {
   const values = [
@@ -56,15 +57,14 @@ export function AboutPage() {
           
           <div className="grid md:grid-cols-2 gap-12 items-start">
             {/* Team Photo Placeholder */}
-            <GlassCard>
-              <div className="aspect-square bg-gradient-to-br from-[#529989]/20 to-[#879153]/20 rounded-lg flex items-center justify-center">
-                <div className="text-center p-8">
-                  <Users className="text-[#529989] mx-auto mb-4" size={80} aria-hidden="true" />
-                  <p className="text-[#204A3B]">Daniela & Juan</p>
-                  <p className="text-[#204A3B]/60 text-sm">Co-Founders</p>
-                </div>
-              </div>
-            </GlassCard>
+            {/* Team Photo */}
+            <div className="relative aspect-[3/4] md:aspect-square lg:aspect-[3/4] rounded-2xl overflow-hidden shadow-xl">
+              <img 
+                src={foundersImage} 
+                alt="Daniela & Juan, Co-Founders of Colaborasolutions" 
+                className="w-full h-full object-cover"
+              />
+            </div>
 
             {/* Story */}
             <div>
