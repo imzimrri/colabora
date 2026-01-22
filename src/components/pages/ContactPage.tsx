@@ -56,7 +56,7 @@ export function ContactPage() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          to: "zimrri.gudino@gmail.com",
+          to: "info@colaborasolutions.com",
           replyTo: formData.email,
           subject: `New Contact Message: ${formData.subject}`,
           html: `
