@@ -15,9 +15,9 @@ export function HireTalentPage() {
     message: "",
   })
 
-  const [formStatus, setFormStatus] = useState<"idle" | "success" | "error">(
-    "idle"
-  )
+  const [formStatus, setFormStatus] = useState<
+    "idle" | "submitting" | "success" | "error"
+  >("idle")
   const [errors, setErrors] = useState<Record<string, string>>({})
 
   const validateForm = () => {
@@ -48,31 +48,63 @@ export function HireTalentPage() {
     return Object.keys(newErrors).length === 0
   }
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault()
 
     if (!validateForm()) {
       return
     }
 
-    // Simulate form submission
-    setTimeout(() => {
-      setFormStatus("success")
-      setFormData({
-        companyName: "",
-        contactName: "",
-        email: "",
-        phone: "",
-        staffingNeed: "",
-        timeline: "",
-        message: "",
+    setFormStatus("submitting")
+
+    try {
+      const response = await fetch("/api/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          to: "zimrri.gudino@gmail.com",
+          replyTo: formData.email,
+          subject: `New Staffing Inquiry from ${formData.companyName}`,
+          html: `
+            <h1>New Staffing Inquiry</h1>
+            <p><strong>Company:</strong> ${formData.companyName}</p>
+            <p><strong>Contact:</strong> ${formData.contactName}</p>
+            <p><strong>Email:</strong> ${formData.email}</p>
+            <p><strong>Phone:</strong> ${formData.phone}</p>
+            <p><strong>Staffing Need:</strong> ${formData.staffingNeed}</p>
+            <p><strong>Timeline:</strong> ${formData.timeline}</p>
+            <p><strong>Message:</strong></p>
+            <p>${formData.message || "No additional details provided."}</p>
+          `,
+        }),
       })
 
-      // Reset success message after 5 seconds
-      setTimeout(() => {
-        setFormStatus("idle")
-      }, 5000)
-    }, 500)
+      if (response.ok) {
+        setFormStatus("success")
+        setFormData({
+          companyName: "",
+          contactName: "",
+          email: "",
+          phone: "",
+          staffingNeed: "",
+          timeline: "",
+          message: "",
+        })
+
+        // Reset success message after 5 seconds
+        setTimeout(() => {
+          setFormStatus("idle")
+        }, 5000)
+      } else {
+        console.error("Failed to send email")
+        setFormStatus("error")
+      }
+    } catch (error) {
+      console.error("Error sending email:", error)
+      setFormStatus("error")
+    }
   }
 
   const handleInputChange = (field: string, value: string) => {

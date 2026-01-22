@@ -1,5 +1,7 @@
+import { PageType } from "../types"
+
 interface FooterProps {
-  onNavigate: (page: string) => void
+  onNavigate: (page: PageType) => void
 }
 
 export function Footer({ onNavigate }: FooterProps) {

@@ -1,7 +1,5 @@
-import { useState } from "react"
+
 import {
-  ChevronDown,
-  ChevronUp,
   CheckCircle,
   FileText,
   UserCheck,
@@ -10,30 +8,7 @@ import { PrimaryButton } from "../PrimaryButton"
 import { GlassCard } from "../GlassCard"
 
 export function JobsPage() {
-  const [openFaq, setOpenFaq] = useState<number | null>(0)
 
-  const faqs = [
-    {
-      question: "How do I apply for a position?",
-      answer:
-        "Simply scroll down to our application form and fill out all required fields. Make sure to select your preferred job type from the dropdown menu. We'll review your application and contact you within 2-3 business days.",
-    },
-    {
-      question: "What types of jobs are available?",
-      answer:
-        "We currently offer opportunities in Agriculture (farm workers, harvesters, equipment operators), Processing Plants (packaging, quality control, warehouse), and General Labor (assembly, maintenance, warehouse operations). You can select your area of interest in the application form.",
-    },
-    {
-      question: "What happens after I submit my application?",
-      answer:
-        "After submission, our team will review your information and conduct an initial screening. If your profile matches available positions, we'll contact you to schedule an interview. The entire process typically takes 3-5 business days.",
-    },
-    {
-      question: "Do I need prior experience?",
-      answer:
-        "While experience is preferred for some positions, we also have entry-level opportunities available. Be sure to highlight any relevant skills or experience in your application, even if from different industries.",
-    },
-  ]
 
   const steps = [
     {

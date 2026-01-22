@@ -2,15 +2,17 @@ import { useState } from "react"
 import { Menu, X } from "lucide-react"
 import { Logo } from "./Logo"
 
+import { PageType } from "../types"
+
 interface HeaderProps {
   currentPage?: string
-  onNavigate: (page: string) => void
+  onNavigate: (page: PageType) => void
 }
 
 export function Header({ currentPage = "home", onNavigate }: HeaderProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
-  const navItems = [
+  const navItems: { label: string; page: PageType }[] = [
     { label: "Home", page: "home" },
     { label: "Find Jobs", page: "jobs" },
     { label: "Hire Talent", page: "hire-talent" },
@@ -18,7 +20,7 @@ export function Header({ currentPage = "home", onNavigate }: HeaderProps) {
     { label: "Contact", page: "contact" },
   ]
 
-  const handleNavClick = (page: string) => {
+  const handleNavClick = (page: PageType) => {
     onNavigate(page)
     setMobileMenuOpen(false)
   }

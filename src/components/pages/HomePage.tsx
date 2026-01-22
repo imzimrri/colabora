@@ -2,8 +2,10 @@ import { Sprout, Package, Users } from "lucide-react"
 import { PrimaryButton } from "../PrimaryButton"
 import { GlassCard } from "../GlassCard"
 
+import { PageType } from "../../types"
+
 interface HomePageProps {
-  onNavigate: (page: string) => void
+  onNavigate: (page: PageType) => void
 }
 
 export function HomePage({ onNavigate }: HomePageProps) {

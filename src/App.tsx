@@ -9,7 +9,8 @@ import { ContactPage } from './components/pages/ContactPage';
 import { PrivacyPage } from './components/pages/PrivacyPage';
 import { TermsPage } from './components/pages/TermsPage';
 
-type PageType = 'home' | 'jobs' | 'hire-talent' | 'about' | 'contact' | 'privacy' | 'terms';
+import { PageType } from './types';
+
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState<PageType>('home');
