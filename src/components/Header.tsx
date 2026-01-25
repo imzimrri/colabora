@@ -44,7 +44,7 @@ export function Header({ currentPage = "home", onNavigate }: HeaderProps) {
             >
               <Logo className="w-10 h-10" />
               <span className="text-[#204A3B] hidden sm:inline">
-                Colaborasolutions
+                Colabora Business Solutions
               </span>
             </button>
 

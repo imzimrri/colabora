@@ -1,9 +1,14 @@
 
 import {
+  ArrowRight,
   CheckCircle,
+  Download,
   FileText,
+  Mail,
+  MapPin,
   UserCheck,
 } from "lucide-react"
+import fw4Pdf from "../../assets/fw4.pdf"
 import { PrimaryButton } from "../PrimaryButton"
 import { GlassCard } from "../GlassCard"
 
@@ -38,11 +43,11 @@ export function JobsPage() {
   }
 
   return (
-    <main className="pt-20">
+    <main>
       {/* Hero/CTA Block */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#529989]/10 to-transparent">
+      <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#529989]/10 to-transparent">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-[#204A3B] mb-6">
+          <h1 className="text-4xl font-bold text-[#204A3B] mb-6 md:text-5xl">
             Find Your Next Role in Agriculture or General Labor
           </h1>
           <p className="text-[#204A3B]/80 mb-8 max-w-2xl mx-auto">
@@ -113,41 +118,98 @@ export function JobsPage() {
           </div>
 
           <GlassCard>
-            <div className="bg-white/50 rounded-lg p-8 min-h-[600px] flex flex-col items-center justify-center border-2 border-dashed border-[#529989]/30">
-              <FileText
-                className="text-[#529989] mb-4"
-                size={48}
-                aria-hidden="true"
-              />
-              <h3 className="text-[#204A3B] mb-4">Application Form</h3>
-              <p className="text-[#204A3B]/80 text-center mb-6 max-w-md">
-                This is where your Google Form would be embedded. To integrate
-                your form, replace this section with an iframe containing your
-                Google Form embed code.
-              </p>
-              <div className="bg-[#529989]/10 rounded p-4 max-w-md">
-                <p className="text-sm text-[#204A3B]/90">
-                  <strong>Integration Instructions:</strong>
-                  <br />
-                  Add your Google Form iframe here with the following
-                  attributes:
-                </p>
-                <code className="block mt-2 text-xs bg-white/50 p-2 rounded">
-                  <iframe
-                    src="YOUR_FORM_URL"
-                    width="100%"
-                    height="800"
-                  ></iframe>
-                </code>
-              </div>
-              <a
-                href="https://docs.google.com/forms"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-6 text-[#529989] hover:text-[#204A3B] underline"
+            <div className="bg-white/50 rounded-lg overflow-hidden">
+              <iframe
+                src="https://docs.google.com/forms/d/e/1FAIpQLSeVnixvjsMlVQrF3gCFZIHlsvXE-iSxn6bM9nk4X0229hNBRQ/viewform?embedded=true"
+                width="100%"
+                height="1345"
+                frameBorder="0"
+                marginHeight={0}
+                marginWidth={0}
+                title="Job Application Form"
               >
-                Create a Google Form →
-              </a>
+                Loading…
+              </iframe>
+            </div>
+          </GlassCard>
+
+          <div className="flex items-center justify-center py-16">
+            <span className="bg-[#529989]/20 h-px w-24"></span>
+            <span className="mx-4 text-[#204A3B] font-bold text-3xl">W4 Form</span>
+            <span className="bg-[#529989]/20 h-px w-24"></span>
+          </div>
+
+          <GlassCard>
+            <div className="p-8">
+              <h3 className="text-2xl font-semibold text-[#204A3B] mb-6 text-center">
+                Submit Manually
+              </h3>
+              <div className="grid md:grid-cols-2 gap-8 items-start">
+                <div className="space-y-6">
+                  <div className="flex items-start gap-4">
+                    <div className="p-2 bg-[#529989]/10 rounded-lg shrink-0">
+                      <Download className="text-[#529989]" size={24} />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-[#204A3B] mb-1">
+                        1. Download Form
+                      </h4>
+                      <p className="text-[#204A3B]/80 text-sm mb-3">
+                        Download and complete our employment form.
+                      </p>
+                      <a
+                        href={fw4Pdf}
+                        download="Colabora-Empoloyment-Form.pdf"
+                        className="inline-flex items-center gap-2 text-[#529989] font-medium hover:text-[#204A3B] transition-colors"
+                      >
+                        Download PDF <ArrowRight size={16} />
+                      </a>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <div className="p-2 bg-[#529989]/10 rounded-lg shrink-0">
+                      <Mail className="text-[#529989]" size={24} />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-[#204A3B] mb-1">
+                        2. Email Us
+                      </h4>
+                      <p className="text-[#204A3B]/80 text-sm mb-2">
+                        Send your completed form to:
+                      </p>
+                      <a
+                        href="mailto:info@colaborasolutions.com"
+                        className="text-[#529989] font-medium hover:underline block break-all"
+                      >
+                        info@colaborasolutions.com
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4 bg-[#529989]/5 p-6 rounded-xl border border-[#529989]/10 h-full">
+                  <div className="p-2 bg-[#529989]/10 rounded-lg shrink-0">
+                    <MapPin className="text-[#529989]" size={24} />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-[#204A3B] mb-2">
+                      Drop Off In Person
+                    </h4>
+                    <p className="text-[#204A3B]/80 text-sm mb-4">
+                      You can also print your completed form and bring it to our
+                      office:
+                    </p>
+                    <address className="not-italic text-[#204A3B] font-medium bg-white/50 p-4 rounded-lg border border-[#529989]/10">
+                      75 Declaration Drive
+                      <br />
+                      Suite 14
+                      <br />
+                      Chico, CA 95973
+                    </address>
+                  </div>
+                </div>
+              </div>
             </div>
           </GlassCard>
 
@@ -162,10 +224,10 @@ export function JobsPage() {
               </a>{" "}
               or{" "}
               <a
-                href="mailto:jobs@colaborasolutions.com"
+                href="mailto:info@colaborasolutions.com"
                 className="text-[#529989] hover:underline"
               >
-                jobs@colaborasolutions.com
+                info@colaborasolutions.com
               </a>
             </p>
           </div>

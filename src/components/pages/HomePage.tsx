@@ -4,6 +4,8 @@ import { GlassCard } from "../GlassCard"
 
 import { PageType } from "../../types"
 
+import handshakeImg from "../../assets/handshake.webp"
+
 interface HomePageProps {
   onNavigate: (page: PageType) => void
 }
@@ -15,7 +17,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#529989]/10 to-transparent">
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-[#204A3B] mb-6">
+            <h1 className="text-4xl font-bold text-[#204A3B] mb-6 md:text-5xl">
               Connecting reliable local talent with essential industries
             </h1>
             <p className="text-[#204A3B]/80 mb-8 max-w-2xl mx-auto">
@@ -187,17 +189,12 @@ export function HomePage({ onNavigate }: HomePageProps) {
             </div>
 
             <GlassCard>
-              <div className="aspect-video bg-gradient-to-br from-[#529989]/20 to-[#879153]/20 rounded-lg flex items-center justify-center">
-                <div className="text-center p-8">
-                  <Users
-                    className="text-[#529989] mx-auto mb-4"
-                    size={64}
-                    aria-hidden="true"
-                  />
-                  <p className="text-[#204A3B]">
-                    Connecting People, Building Communities
-                  </p>
-                </div>
+              <div className="aspect-video rounded-lg overflow-hidden flex items-center justify-center">
+                <img
+                  src={handshakeImg}
+                  alt="Connecting People, Building Communities"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </GlassCard>
           </div>

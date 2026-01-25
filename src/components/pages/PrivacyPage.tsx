@@ -2,11 +2,11 @@ import { GlassCard } from "../GlassCard"
 
 export function PrivacyPage() {
   return (
-    <main className="pt-20">
+    <main>
       {/* Hero Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#529989]/10 to-transparent">
+      <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#529989]/10 to-transparent">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-[#204A3B] mb-4">Privacy Policy</h1>
+          <h1 className="text-4xl font-bold text-[#204A3B] mb-4 md:text-5xl">Privacy Policy</h1>
           <p className="text-[#204A3B]/80">
             Last Updated:{" "}
             {new Date().toLocaleDateString("en-US", {

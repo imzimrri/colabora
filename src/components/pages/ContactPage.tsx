@@ -104,11 +104,11 @@ export function ContactPage() {
   }
 
   return (
-    <main className="pt-20">
+    <main>
       {/* Hero Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#529989]/10 to-transparent">
+      <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#529989]/10 to-transparent">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-[#204A3B] mb-6">Contact Us</h1>
+          <h1 className="text-4xl font-bold text-[#204A3B] mb-6 md:text-5xl">Contact Us</h1>
           <p className="text-[#204A3B]/80 max-w-2xl mx-auto">
             Have questions or need assistance? We're here to help. Reach out to
             us using the form below or contact us directly using the information

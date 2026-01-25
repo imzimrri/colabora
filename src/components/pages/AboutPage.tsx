@@ -27,11 +27,11 @@ export function AboutPage() {
   ];
 
   return (
-    <main className="pt-20">
+    <main>
       {/* Mission Statement Block */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#529989]/10 to-transparent">
+      <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#529989]/10 to-transparent">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-[#204A3B] text-center mb-8">About Colaborasolutions</h1>
+          <h1 className="text-4xl font-bold text-[#204A3B] text-center mb-8 md:text-5xl">About Colaborasolutions</h1>
           
           <GlassCard className="mb-8">
             <blockquote className="text-center">
@@ -58,13 +58,15 @@ export function AboutPage() {
           <div className="grid md:grid-cols-2 gap-12 items-start">
             {/* Team Photo Placeholder */}
             {/* Team Photo */}
-            <div className="relative aspect-[3/4] md:aspect-square lg:aspect-[3/4] rounded-2xl overflow-hidden shadow-xl">
-              <img 
-                src={foundersImage} 
-                alt="Daniela & Juan, Co-Founders of Colaborasolutions" 
-                className="w-full h-full object-cover"
-              />
-            </div>
+            <GlassCard className="h-fit">
+              <div className="relative aspect-[3/4] md:aspect-square lg:aspect-[3/4] rounded-lg overflow-hidden">
+                <img
+                  src={foundersImage}
+                  alt="Daniela & Juan, Co-Founders of Colaborasolutions"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </GlassCard>
 
             {/* Story */}
             <div>
