@@ -26,7 +26,7 @@ export default async function handler(req: Request) {
     }
 
     const { data, error } = await resend.emails.send({
-      from: 'Colabora Solutions <info@colaborasolutions.com>',
+      from: 'Colabora Solutions <info@colaborasolution.com>',
       to: [to], // For testing, this must be the verified email (zimrri.gudino@gmail.com)
       subject: subject,
       html: html,

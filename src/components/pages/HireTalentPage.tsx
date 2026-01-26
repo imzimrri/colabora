@@ -64,7 +64,7 @@ export function HireTalentPage() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          to: "info@colaborasolutions.com",
+          to: "info@colaborasolution.com",
           replyTo: formData.email,
           subject: `New Staffing Inquiry from ${formData.companyName}`,
           html: `
