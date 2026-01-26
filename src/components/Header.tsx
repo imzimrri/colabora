@@ -111,11 +111,11 @@ export function Header({ currentPage = "home", onNavigate }: HeaderProps) {
                   </button>
                 ))}
                 <a
-                  href="tel:+15555551234"
+                  href="tel:+15307126359"
                   className="text-[#529989] px-4 py-2 hover:bg-[#529989]/5 transition-colors"
-                  aria-label="Call us at 555-555-1234"
+                  aria-label="Call us at (530) 712-6359"
                 >
-                  📞 (555) 555-1234
+                  📞 (530) 712-6359
                 </a>
               </div>
             </nav>
