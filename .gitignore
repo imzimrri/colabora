@@ -138,7 +138,6 @@ storybook-static
 
 # Gatsby files
 .cache/
-public
 
 # Next.js files
 .next/
